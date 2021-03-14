@@ -1,0 +1,97 @@
+
+<div class="container">
+    <div class="card text-size-md shadow p-3 bg-white my-2" style="width:1200px;margin: 0 auto;">
+      <app-section-header-black>
+        <div id="partA_Header">Capture Daily Attendance</div>
+      </app-section-header-black>
+     
+      <div class="card mx-auto red" style="width: 99.6%; color: white">
+        <div class="card-body">
+          <div class="text-center">
+            <div class="row">
+
+              <div class="col">
+                <label>Teacher</label>
+                <select class="browser-default custom-select">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <label>Class</label>
+                <select class="browser-default custom-select">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <label>Date</label>
+                <input type="date" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="select a date">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="card-body">
+        <div class="row my-3 mx-0">
+          <table mdbTable>
+            <thead>
+              <tr>
+                <th>Teacher</th>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Attendance</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr mdbTableCol>
+                <th scope="row">1</th>
+                <td>
+                  <select class="browser-default custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </td>
+                <td>Potgieter</td> 
+                <td>
+                  <!-- Default unchecked -->
+                  <mdb-checkbox [default]="true"></mdb-checkbox>
+                </td>
+                <td>
+                  <button type="button"
+                      mdbBtn
+                      color="primary"
+                      mdbWavesEffect
+                      size='sm'
+                      (click)="add()">
+                      <i class="fas fa-plus"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button"
+                mdbBtn
+                style="border-radius: 49%"
+                class="red text-white"
+                mdbWavesEffect
+                (click)="add()">
+               <i class="fas fa-save"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>

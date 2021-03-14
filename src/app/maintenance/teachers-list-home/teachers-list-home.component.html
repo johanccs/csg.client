@@ -1,0 +1,58 @@
+
+<div class="container">
+    <div class="card text-size-md shadow p-3 my-2 bg-white rounded" style="width:1200px;margin: 0 auto;">
+      <app-section-header-black>
+        <div id="partA_Header">Teachers</div>
+      </app-section-header-black>
+     
+      <div class="card-body">
+        <div class="row my-3 mx-0">
+
+          <table mdbTable>
+            <thead>
+              <tr>
+                <th>Student Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr mdbTableCol>
+                <th scope="row">1</th>
+                <td>Johan</td>
+                <td>Potgieter</td>               
+                <td>
+                  <button type="button"
+                    mdbBtn
+                    style="background-color: #F1C40F; color:white"
+                    mdbWavesEffect
+                    (click)="editClass()"
+                    size="sm">
+                    <i class="fas fa-user-edit"></i>
+                  </button>
+                  <button type="button"
+                    mdbBtn
+                    style="background-color: #CC0000; color:white"
+                    mdbWavesEffect
+                    size="sm"
+                    (click)="deleteClass()">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button"
+                mdbBtn
+                style="border-radius: 49%"
+                class="red text-white"
+                mdbWavesEffect
+                (click)="addNewTeacher()">
+                <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <mdb-card class="text-sm my-2" style="width: 70%; margin: 0 auto;">
+    <form>
+      <mdb-card-body>
+        <app-section-header-black>
+          <div>Class Details</div>
+        </app-section-header-black>
+
+        <div class="row text-sm mt-2">
+          <div class="form-group mx-5 col">
+            <label id="partA_cpyname">Name</label>
+            <input type="text"
+                    name="partA_cpyname"
+                    class="form-control form-control-sm bg-med text-sm">
+          </div>
+
+          <div class="form-group mx-5 col">
+            <label id="partA_cpyname">Description</label>
+            <input type="text"
+                    name="partA_cpyname"
+                    class="form-control form-control-sm bg-med text-sm">
+          </div>
+
+          <div class="form-group mx-5 col">
+            <label id="partA_cpyname">Date Registered</label>
+            <input type="date"
+                    name="partA_cpyname"
+                    class="form-control form-control-sm bg-med text-sm">
+          </div>
+        </div>
+
+        <div class="row text-sm">
+          <div class="col mx-5">
+            <button type="button"
+                  mdbBtn
+                  class="red text-white"
+                  style="width: 130px;"
+                  mdbWavesEffect
+                  (click)="save()">
+                  <i class="fa fa-unlock-alt my-1" style="float: left;"></i>
+                  <div class="text-sm">Save</div>
+              </button>
+          </div>
+        </div>
+
+      </mdb-card-body>
+    </form>
+  </mdb-card>
+</div>
+
+
