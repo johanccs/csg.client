@@ -1,51 +1,53 @@
 <div class="container-fluid">
   <mdb-card class="text-sm" style="width: 70%; margin: 0 auto;">
-    <form>
-      <mdb-card-body>
-        <app-section-header-black>
-          Teacher Details
-        </app-section-header-black>
-
+    <mdb-card-body>
+      <app-section-header-black>
+        Teacher Details
+      </app-section-header-black>
+      <form (ngSubmit)='save()' #f="ngForm">
         <div class="row text-sm my-2">
           <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Name</label>
+            <label>Name</label>
             <input type="text"
-                    name="partA_cpyname"
+                    name="name"
+                    id="name"
+                    [(ngModel)]="newTeacher.name"
                     class="form-control form-control-sm bg-med text-sm">
           </div>
 
           <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Surname</label>
+            <label>Surname</label>
             <input type="text"
-                    name="partA_cpyname"
+                    name="surname"
+                    id="surname"
+                    [(ngModel)]="newTeacher.surname"
                     class="form-control form-control-sm bg-med text-sm">
           </div>
 
           <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Date Registered</label>
+            <label>Date Registered</label>
             <input type="date"
-                    name="partA_cpyname"
+                    name="registeredDate"
+                    id="registeredDate"
+                    [(ngModel)]="newTeacher.dateRegistered"
                     class="form-control form-control-sm bg-med text-sm">
           </div>
         </div>
-
         <div class="row text-sm">
           <div class="col mx-5">
-            <button type="button"
+            <button type="submit"
                   mdbBtn
                   class="red text-white"
-                  style="width: 130px;"
-                  mdbWavesEffect
-                  (click)="save()">
+                  style="width: 110px;"
+                  mdbWavesEffec>
                   <i class="fa fa-unlock-alt my-1" style="float: left;"></i>
-                  <div class="text-sm">Save</div>
+                  <div class="text-xs my-1">Save</div>
               </button>
           </div>
-           
-        </div>
 
-      </mdb-card-body>
-    </form>
+        </div>
+      </form>
+    </mdb-card-body>
   </mdb-card>
 </div>
 

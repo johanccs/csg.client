@@ -9,6 +9,10 @@ import { FooterNavComponent } from './nav/footer-nav/footer-nav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DailyAttendanceHomeComponent } from './daily-attendance-home/daily-attendance-home.component';
 import { SharedModule } from './shared/shared.module';
+import { ClassEntityService } from 'src/app/services/class-entity-service.service';
+import { StoreService } from 'src/app/services/store-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,11 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     SharedModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ClassEntityService, StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

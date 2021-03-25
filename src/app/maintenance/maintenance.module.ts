@@ -11,6 +11,7 @@ import { ClassesListHomeComponent } from './classes-list-home/classes-list-home.
 import { ToastModule } from 'primeng/toast';
 import { TeachersListHomeComponent } from './teachers-list-home/teachers-list-home.component';
 import { StudentsListHomeComponent } from './students-list-home/students-list-home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { StudentsListHomeComponent } from './students-list-home/students-list-ho
     CommonModule,
     MaintenanceRoutingModule,
     SharedModule,
+    FormsModule,
     MDBBootstrapModule,
   ]
 })

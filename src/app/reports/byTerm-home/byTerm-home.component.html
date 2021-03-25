@@ -8,17 +8,15 @@
 
          <div class="row text-sm my-2">
           <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Date From</label>
+            <label>Date From</label>
             <input type="date"
-                    name="partA_cpyname"
-                    class="form-control form-control-sm bg-med text-sm">
+                   class="form-control form-control-sm bg-med text-sm">
           </div>
 
           <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Date To</label>
-            <input type="date"
-                    name="partA_cpyname"
-                    class="form-control form-control-sm bg-med text-sm">
+            <label>Date To</label>
+            <input type="date"                   
+                   class="form-control form-control-sm bg-med text-sm">
           </div>
         </div>
   
@@ -27,7 +25,8 @@
             <button type="button"
                   mdbBtn
                   class="red text-white"
-                  style="width: 130px;"
+                  style="width: 110px;"
+                  size='sm'
                   mdbWavesEffect
                   (click)="download()">
                  <i class="fas fa-print"></i>

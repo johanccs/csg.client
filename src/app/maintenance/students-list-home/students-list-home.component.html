@@ -4,24 +4,25 @@
       <app-section-header-black>
         <div id="partA_Header">Students</div>
       </app-section-header-black>
-     
+
       <div class="card-body">
         <div class="row my-3 mx-0">
 
-          <table mdbTable>
+          <table mdbTable >
             <thead>
-              <tr>
+              <tr class="text-sm">
                 <th>Student Id</th>
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr mdbTableCol>
-                <th scope="row">1</th>
-                <td>Johan</td>
-                <td>Potgieter</td>               
+            <tbody *ngFor='let student of studentArray'>
+              <tr mdbTableCol class="text-sm">
+                <th scope="row">{{ student.id }}</th>
+                <td>{{ student.name }}</td>
+                <td>{{ student.surname }}</td>
+                <td>{{ student.dateRegistered|date: 'dd/MM/yyyy' }}</td>
                 <td>
                   <button type="button"
                     mdbBtn
@@ -33,7 +34,7 @@
                   </button>
                   <button type="button"
                     mdbBtn
-                    style="color:white; background-color: #CC0000"                   
+                    style="color:white; background-color: #CC0000"
                     mdbWavesEffect
                     (click)="deleteClass()"
                     size="sm">

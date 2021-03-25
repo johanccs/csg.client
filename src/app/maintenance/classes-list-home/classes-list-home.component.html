@@ -4,23 +4,23 @@
       <app-section-header-black>
         <div id="partA_Header">Classes</div>
       </app-section-header-black>
-     
+
       <div class="card-body">
         <div class="row my-3 mx-0">
-          <table mdbTable>
+          <table mdbTable size="sm">
             <thead>
               <tr>
-                <th>Student Id</th>
+                <th>Class Id</th>
                 <th>Name</th>
-                <th>Surname</th>
+                <th>Description</th>
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody>
-              <tr mdbTableCol>
-                <th scope="row">1</th>
-                <td>Johan</td>
-                <td>Potgieter</td>               
+            <tbody  *ngFor="let class of classArray">
+              <tr mdbTableCol class="text-sm">
+                <th scope="row">{{ class.id }}</th>
+                <td>{{ class.className }}</td>
+                <td>{{ class.description }}</td>
                 <td>
                   <button type="button"
                     mdbBtn
@@ -32,7 +32,7 @@
                   </button>
                   <button type="button"
                     mdbBtn
-                    style="background-color: #CC0000; color:white"                    
+                    style="background-color: #CC0000; color:white"
                     mdbWavesEffect
                     (click)="deleteClass()"
                     size="sm">

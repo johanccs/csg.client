@@ -5,45 +5,49 @@
         <app-section-header-black>
           Student Details
         </app-section-header-black>
+        <form (ngSubmit)='save()' #f="ngForm">
+          <div class="row text-sm mt-2">
+            <div class="form-group mx-5 col">
+              <label>Name</label>
+              <input type="text"
+                      id='name'
+                      name="name"
+                      [(ngModel)]="newStudent.name"
+                      class="form-control form-control-sm bg-med text-sm">
+            </div>
 
-        <div class="row text-sm mt-2">
-          <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Name</label>
-            <input type="text"
-                    name="partA_cpyname"
-                    class="form-control form-control-sm bg-med text-sm">
+            <div class="form-group mx-5 col">
+              <label>Surname</label>
+              <input type="text"
+                      name="surname"
+                      id='surname'
+                      [(ngModel)]="newStudent.surname"
+                      class="form-control form-control-sm bg-med text-sm">
+            </div>
+
+            <div class="form-group mx-5 col">
+              <label>Date Registered</label>
+              <input type="date"
+                      name="dateRegistered"
+                      id='dateRegistered'
+                      [(ngModel)]="newStudent.dateRegistered"
+                      class="form-control form-control-sm bg-med text-sm">
+            </div>
           </div>
+          <div class="row text-sm">
+            <div class="col mx-5">
+              <button type="submit"
+                    mdbBtn
+                    class="red text-white text-xs"
+                    style="width: 110px;"
+                    mdbWavesEffect>
+                    <i class="fa fa-unlock-alt my-1" style="float: left;"></i>
+                    <div class="text-sm">Save</div>
+                </button>
+            </div>
 
-          <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Surname</label>
-            <input type="text"
-                    name="partA_cpyname"
-                    class="form-control form-control-sm bg-med text-sm">
           </div>
-
-          <div class="form-group mx-5 col">
-            <label id="partA_cpyname">Date Registered</label>
-            <input type="date"
-                    name="partA_cpyname"
-                    class="form-control form-control-sm bg-med text-sm">
-          </div>
-        </div>
-
-        <div class="row text-sm">
-          <div class="col mx-5">
-            <button type="button"
-                  mdbBtn
-                  class="red text-white"
-                  style="width: 130px;"
-                  mdbWavesEffect
-                  (click)="save()">
-                  <i class="fa fa-unlock-alt my-1" style="float: left;"></i>
-                  <div class="text-sm">Save</div>
-              </button>
-          </div>
-           
-        </div>
-
+        </form>
       </mdb-card-body>
     </form>
   </mdb-card>
